@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 
 import authRoutes from './routes/auth.js';
-import smartBinRoutes from './routes/smartBins.js';
+import smartBinRoutes from './routes/SmartBin.js';
 import incidentRoutes from './routes/incidents.js';
 
 import User from './models/User.js';
@@ -16,7 +16,7 @@ app.use(express.json());
 
 // Routes
 app.use('/api/auth', authRoutes);
-app.use('/api/smart-bins', smartBinRoutes);
+app.use('/api/smartbins', smartBinRoutes);
 app.use('/api/incidents', incidentRoutes);
 
 const MONGO_URI = "mongodb://localhost:27017/WMS_IoT"; // Hardcoded MongoDB connection string
